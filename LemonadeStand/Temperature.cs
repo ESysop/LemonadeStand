@@ -13,12 +13,15 @@ namespace LemonadeStand
 
 		public void getTemperature ()
 			{
-			for (int i = 0; i < 100; i++)
-				{
+			int num = 0;
 
+
+			for (int i = 0; i < 7; i++)
+				{
 				RandomGenerator t100 = new RandomGenerator();
 				t100.TempGen100();
-				Console.WriteLine("The temperature is " +(t100.T100) + ", ");
+				Console.WriteLine("The Forecast for Day " + (num++) + " is "+(t100.T100) + "°");
+				
 				Thread.Sleep(20);
 				}
 			}
