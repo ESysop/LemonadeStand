@@ -10,8 +10,14 @@ namespace LemonadeStand
 		{
 		static void Main (string[] args)
 			{
-
+			Weather getWeatherCondition = new Weather();
+			Temperature getTemperatureCondition = new Temperature();
+			
+			getWeatherCondition.getWeather();
+			getTemperatureCondition.getTemperature();
 			}
+		
+		
 		}
 
 	}
