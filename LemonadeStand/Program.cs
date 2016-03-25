@@ -12,9 +12,11 @@ namespace LemonadeStand
 			{
 			Weather getWeatherCondition = new Weather();
 			Temperature getTemperatureCondition = new Temperature();
-			
+			Customer makeCustomerList = new Customer();
 			getWeatherCondition.getWeather();
 			getTemperatureCondition.getTemperature();
+			makeCustomerList.makeCustomers();
+
 			}
 		
 		

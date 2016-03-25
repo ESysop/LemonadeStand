@@ -6,8 +6,28 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 	{
-	class Customer
+	public class Customer
 		{
+		public Customer()
+			{ }
+		RandomGenerator mood = new RandomGenerator();
+		public List<int> customerMoodList = new List<int>();
+		public void makeCustomers ()
+			{
+				
+
+			for (int i = 0; i < 100; i++)
+				{
+				mood.RandGen4();
+
+				
+			int moodFactor = mood.R4;
+			customerMoodList.Add(moodFactor);
+
+				}
+			}
+
+
 
 		}
 

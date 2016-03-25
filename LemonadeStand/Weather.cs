@@ -21,7 +21,7 @@ namespace LemonadeStand
 			{
 
 			RandomGenerator r4 = new RandomGenerator();
-			r4.RandGen();
+			r4.RandGen4();
 			Console.Write(weatherConditionsList[r4.R4] + ", ");
 			Thread.Sleep(20);
 			}

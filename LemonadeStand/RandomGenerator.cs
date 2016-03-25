@@ -13,12 +13,12 @@ namespace LemonadeStand
 		public RandomGenerator ()
 			{ }
 		public int R4, T100;
-		public void RandGen ()
+		public void RandGen4 ()
 			{
 			Random rnd = new Random();
 			R4 = rnd.Next(0, 4);
 			}
-		public void TempGen ()
+		public void TempGen100 ()
 			{
 			Random rnd = new Random();
 			T100 = rnd.Next(15, 116);

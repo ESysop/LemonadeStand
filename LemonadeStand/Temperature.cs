@@ -17,7 +17,7 @@ namespace LemonadeStand
 				{
 
 				RandomGenerator t100 = new RandomGenerator();
-				t100.TempGen();
+				t100.TempGen100();
 				Console.WriteLine("The temperature is " +(t100.T100) + ", ");
 				Thread.Sleep(20);
 				}
