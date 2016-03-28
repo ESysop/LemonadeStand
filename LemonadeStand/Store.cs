@@ -6,8 +6,19 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 	{
-	class Store
+	public class Store
 		{
+		public int ice = 0;
+		public int lemons = 0;
+		public int sugar = 0;
+		public int water = 0;
+		public int cups = 0;
+
+		public Store ()
+			{ }
+
+
 
 		}
+
 	}
