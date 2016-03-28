@@ -10,15 +10,9 @@ namespace LemonadeStand
 		{
 		static void Main (string[] args)
 			{
-			Weather getWeatherCondition = new Weather();
-			Temperature getTemperatureCondition = new Temperature();
-			Customer makeCustomerList = new Customer();
-			SplashScreen splashscreen = new SplashScreen();
-			splashscreen.printSplashScreen();
-			getWeatherCondition.getWeather();
-			getTemperatureCondition.getTemperature();
-			makeCustomerList.makeCustomers();
 
+			Game Run = new Game();
+			Run.startGame();
 			}
 		
 		

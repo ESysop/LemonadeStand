@@ -11,19 +11,15 @@ namespace LemonadeStand
 		{
 		public string todaysWeather;
 
-		string[] weatherConditionsList = new string[4] { "Heavy Storms", "Chance of light rain", "Hazy and humid", "Clear and Sunny" };
+		public string[] weatherConditionsList = new string[4] { "Heavy Storms", "Chance of light rain", "Hazy and humid", "Clear and Sunny" };
+
 		public Weather ()
-		{
-		}
-	public void getWeather ()
-		{
-		for (int i = 0; i < 10; i++)
+		{}
+			public void getWeather ()
 			{
-			RandomGenerator r4 = new RandomGenerator();
-			r4.RandGen4();
-				Console.WriteLine(weatherConditionsList[r4.R4] + ", ");
-			Thread.Sleep(20);
-			}
+					
+				RandomGenerator r4 = new RandomGenerator();
+				r4.RandGen4();			
 
 			}
 

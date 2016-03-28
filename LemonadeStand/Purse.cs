@@ -6,9 +6,21 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 	{
-	class Purse
+	public class Purse
 		{
 
+		public double purseBalance = 20.00;
+
+		public Purse ()
+			{ }
+			public double buySupplies ()
+			{
+
+			return purseBalance;
+			}
+
+
+			
 		}
 	}
 
