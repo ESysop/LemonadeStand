@@ -12,6 +12,7 @@ namespace LemonadeStand
 		public Lemons goToBuyMoreLemonsMenu;
 		public Sugar goToBuyMoreSugarMenu;
 		public PaperCups goToBuyCupsMenu;
+		public Purse purse;
 		public int paperCupOnHand;
 		public int units;
 		public double unitPrice;
@@ -22,6 +23,8 @@ namespace LemonadeStand
 			goToBuyCupsMenu = new PaperCups();
 			goToBuyMoreSugarMenu = new Sugar();
 			goToBuyMoreLemonsMenu = new Lemons();
+			purse = new Purse();
+
 			}
 
 		public void getStoreMenu ()
@@ -35,7 +38,7 @@ namespace LemonadeStand
 				}
 			else if (storeChoice == "2")
 				{
-				goToBuyMoreLemonsMenu.buyMoreLemons ();	
+				goToBuyMoreLemonsMenu.buyMoreLemons (purse);	
 				}
 			else if (storeChoice == "3")
 				{
