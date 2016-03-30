@@ -8,8 +8,11 @@ namespace LemonadeStand
 	{
 	public class SplashScreen
 		{
-		public SplashScreen ()
-			{ }
+		Store menu;
+		public SplashScreen (Store Menu)
+			{
+			menu = Menu;
+			}
 		public void printSplashScreen ()
 			{
 			Weather getWeatherReport = new Weather();
@@ -31,7 +34,6 @@ namespace LemonadeStand
 			string stockUp = Console.ReadLine();
 			if (stockUp.ToUpper() == "Y")
 				{
-				Store menu = new Store();
 
 				menu.getStoreMenu();
 

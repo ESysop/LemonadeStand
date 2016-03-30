@@ -9,14 +9,14 @@ namespace LemonadeStand
 	public class Purse
 		{
 
-		public double purseBalance = 20.00;
+		public decimal purseBalance = 20.00M;
 
 		public Purse ()
 			{ }
-			public double buySupplies ()
+			public void buySupplies ()
 			{
-
-			return purseBalance;
+			Console.WriteLine("\n\tYour account balance is \t" + (purseBalance));
+			
 			}
 
 

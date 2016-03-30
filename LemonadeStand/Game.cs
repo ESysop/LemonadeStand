@@ -8,14 +8,16 @@ namespace LemonadeStand
 	{
 	public class Game
 		{
-		public Game ()
-
-			{ }
-			SplashScreen splashscreen = new SplashScreen();
+			Store menu = new Store();
+			SplashScreen splashscreen;
 			Weather getWeatherCondition = new Weather();
 			Temperature getTemperatureCondition = new Temperature();
 			Customer makeCustomerList = new Customer();
-			Store menu = new Store();
+		public Game ()
+
+			{
+			splashscreen = new SplashScreen(menu);
+			}
 
 
 			public void startGame ()

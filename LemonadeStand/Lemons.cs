@@ -10,29 +10,31 @@ namespace LemonadeStand
 		{
 		public Lemons ()
 			{ }
+		public decimal lemonUnitPrice;
+		public int lemonUnits;
 		Store store = new Store();
-		//Store lemons = new Store();
+		
 		public void buyMoreLemons ()
 			{
 			Console.WriteLine("Select a quantity for your order.\n\n [1] \t  10 Lemons \n [2] \t 25 Lemons \n [3] \t  75 Lemons");
 			string usersChoice = Console.ReadLine();
-			//return usersChoice;
+			
 
 			if (usersChoice == "1")
 				{
-				store.units = 10;
-				store.unitPrice = .75;
+				lemonUnits += 10;
+				lemonUnitPrice -= .75M;
 				
 				}
 			else if (usersChoice == "2")
 				{
-				store.units = 25;
-				store.unitPrice = 1.75;
+				lemonUnits += 25;
+				lemonUnitPrice -= 1.75M;
 				}
 			else if (usersChoice == "3")
 				{
-				store.units = 75;
-				store.unitPrice = 2.75;
+				lemonUnits += 75;
+				lemonUnitPrice -= 2.75M;
 
 				
 				}

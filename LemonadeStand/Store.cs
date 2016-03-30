@@ -8,24 +8,26 @@ namespace LemonadeStand
 	{
 	public class Store
 		{
-		public int iceOnHand ;
+		public Ice goToBuyIceMenu;
 		public int lemonsOnHand;
-		public int sugarOnHand = 0;
-		public int waterOnHand = 0;
-		public int cupsOnHand = 0;
+		public int sugarOnHand ;
+		public int waterOnHand ;
+		public int cupsOnHand ;
 		public int units ;
 		public double unitPrice;
 
 		public Store ()
-			{ }
-		//Water goToBuyWaterMenu = new Water();
-		public string storeChoice;
+			{
+			goToBuyIceMenu = new Ice();
+			}
+		
+		
 
 		public void getStoreMenu ()
 			{
 						
 		Console.WriteLine("Thank you for shopping at Buyin Large, What would you like to purchase today?\n\n[1] Paper Cups\n[2] Lemons\n[3] Sugar\n[4] Ice");
-			storeChoice =Console.ReadLine();
+			string storeChoice =Console.ReadLine();
 			if (storeChoice == "1")
 				{
 					PaperCups goToBuyCupsMenu = new PaperCups(); goToBuyCupsMenu.buyMoreCups();
@@ -40,7 +42,7 @@ namespace LemonadeStand
 				}
 			else if (storeChoice =="4")
 				{
-					Ice goToBuyIceMenu = new Ice();	goToBuyIceMenu.buyMoreIce();
+					goToBuyIceMenu.buyMoreIce();
 				}
 			else
 				{
@@ -51,7 +53,7 @@ namespace LemonadeStand
 			}
 		public void inventoryDisplay ()
 			{
-			Console.WriteLine("Your Current Inventory levels are as follows:\n\nCups\t" + (cupsOnHand) + "\nIce\t" + (iceOnHand) + "\nSugar\t" + (sugarOnHand) + "\nLemons\t" + (lemonsOnHand) + "\nWater\t" + (waterOnHand));
+			Console.WriteLine("Your Current Inventory levels are as follows:\n\nCups\t" + (cupsOnHand) + "\nIce\t" + (goToBuyIceMenu.iceOnHand) + "\nSugar\t" + (sugarOnHand) + "\nLemons\t" + (lemonsOnHand) + "\nWater\t" + (waterOnHand));
 			}
 }
 		}
