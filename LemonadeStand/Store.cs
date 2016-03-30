@@ -7,55 +7,51 @@ using System.Threading.Tasks;
 namespace LemonadeStand
 	{
 	public class Store
-		{
+		{// Member variables declared here so they can be accessed throu store
 		public Ice goToBuyIceMenu;
-		public int lemonsOnHand;
-		public int sugarOnHand ;
-		public int waterOnHand ;
-		public int cupsOnHand ;
-		public int units ;
+		public Lemons goToBuyMoreLemonsMenu;
+		public Sugar goToBuyMoreSugarMenu;
+		public PaperCups goToBuyCupsMenu;
+		public int paperCupOnHand;
+		public int units;
 		public double unitPrice;
 
-		public Store ()
+		public Store ()//instantiate 1 time in the constructor
 			{
 			goToBuyIceMenu = new Ice();
+			goToBuyCupsMenu = new PaperCups();
+			goToBuyMoreSugarMenu = new Sugar();
+			goToBuyMoreLemonsMenu = new Lemons();
 			}
-		
-		
 
 		public void getStoreMenu ()
 			{
-						
-		Console.WriteLine("Thank you for shopping at Buyin Large, What would you like to purchase today?\n\n[1] Paper Cups\n[2] Lemons\n[3] Sugar\n[4] Ice");
-			string storeChoice =Console.ReadLine();
+			Console.WriteLine("Thank you for shopping at Buyin Large, What would you like to purchase today?\n\n[1] Paper Cups\n[2] Lemons\n[3] Sugar\n[4] Ice");
+
+			string storeChoice = Console.ReadLine();
 			if (storeChoice == "1")
 				{
-					PaperCups goToBuyCupsMenu = new PaperCups(); goToBuyCupsMenu.buyMoreCups();
+				goToBuyCupsMenu.buyMoreCups();
 				}
 			else if (storeChoice == "2")
 				{
-					Lemons goToBuyLemonsMenu = new Lemons(); goToBuyLemonsMenu.buyMoreLemons();
+				goToBuyMoreLemonsMenu.buyMoreLemons ();	
 				}
 			else if (storeChoice == "3")
 				{
-					Sugar goToBuySugarMenu = new Sugar() ;goToBuySugarMenu.buyMoreSugar();
+				goToBuyMoreSugarMenu.buyMoreSugar();
 				}
-			else if (storeChoice =="4")
+			else if (storeChoice == "4")
 				{
-					goToBuyIceMenu.buyMoreIce();
-				}
-			else
-				{
-
+				goToBuyIceMenu.buyMoreIce();
 				}
 
-		
 			}
 		public void inventoryDisplay ()
 			{
-			Console.WriteLine("Your Current Inventory levels are as follows:\n\nCups\t" + (cupsOnHand) + "\nIce\t" + (goToBuyIceMenu.iceOnHand) + "\nSugar\t" + (sugarOnHand) + "\nLemons\t" + (lemonsOnHand) + "\nWater\t" + (waterOnHand));
+			Console.WriteLine("\nYour Current Inventory levels are as follows:\n\nCups\t" + (goToBuyCupsMenu.cupsOnHand) + "\nIce\t" + (goToBuyIceMenu.iceOnHand) + "\nSugar\t" + (goToBuyMoreSugarMenu.sugarOnHand) + "\nLemons\t" + (goToBuyMoreLemonsMenu.lemonsOnHand)  );//waterOnHand
 			}
-}
 		}
+	}
 
-	
+

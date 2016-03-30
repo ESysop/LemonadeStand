@@ -10,11 +10,12 @@ namespace LemonadeStand
 		{
 			Store menu = new Store();
 			SplashScreen splashscreen;
-			Weather getWeatherCondition = new Weather();
-			Temperature getTemperatureCondition = new Temperature();
+			//Weather getWeatherCondition = new Weather();
+			//Temperature getTemperatureCondition = new Temperature();
 			Customer makeCustomerList = new Customer();
-		public Game ()
 
+			public Game ()
+			// in the constructor we passed in 'menu' which is a new instantiation of 'store'
 			{
 			splashscreen = new SplashScreen(menu);
 			}
@@ -31,10 +32,19 @@ namespace LemonadeStand
 				menu.inventoryDisplay();
 				splashscreen.restockOption();
 				menu.inventoryDisplay();
+				splashscreen.restockOption();
+			splashscreen.restockOption();
+			splashscreen.restockOption();
+			menu.inventoryDisplay();
+
+			splashscreen.restockOption();
+				menu.inventoryDisplay();
+			splashscreen.restockOption();
+				menu.inventoryDisplay();
+			splashscreen.restockOption();
+			menu.inventoryDisplay();
 
 
-
-	
 			}
 
 

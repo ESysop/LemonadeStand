@@ -10,9 +10,8 @@ namespace LemonadeStand
 		{
 		public Lemons ()
 			{ }
-		public decimal lemonUnitPrice;
-		public int lemonUnits;
-		Store store = new Store();
+		public decimal lemonsUnitPrice;
+		public int lemonsOnHand;
 		
 		public void buyMoreLemons ()
 			{
@@ -22,22 +21,23 @@ namespace LemonadeStand
 
 			if (usersChoice == "1")
 				{
-				lemonUnits += 10;
-				lemonUnitPrice -= .75M;
+				lemonsOnHand += 10;
+				lemonsUnitPrice -= .75M;
 				
 				}
 			else if (usersChoice == "2")
 				{
-				lemonUnits += 25;
-				lemonUnitPrice -= 1.75M;
+				lemonsOnHand += 25;
+				lemonsUnitPrice -= 1.75M;
 				}
 			else if (usersChoice == "3")
 				{
-				lemonUnits += 75;
-				lemonUnitPrice -= 2.75M;
+				lemonsOnHand += 75;
+				lemonsUnitPrice -= 2.75M;
 
 				
 				}
+			Console.WriteLine("\nYou now have this many Lemon units : " + (lemonsOnHand) + "\n" + (lemonsUnitPrice) + "will be deducted from your balance");
 			}
 		}
 	}

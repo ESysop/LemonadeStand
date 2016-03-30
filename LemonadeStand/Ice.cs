@@ -8,16 +8,16 @@ namespace LemonadeStand
 	{
 	public class Ice 
 		{
+
 		public Ice () { }
 
-		//public int iceOnHand ;
 		public decimal iceUnitPrice;
-		public string usersChoice;
 		public int iceOnHand;
+
 		public void buyMoreIce ()
 			{
 			Console.WriteLine("Select a quantity for your order.\n\n[1]\t100 Cube\n[2]\t300 Cubes\n[3]\t750 Cubes");
-			usersChoice = Console.ReadLine();
+			string usersChoice = Console.ReadLine();
 			
 
 			if (usersChoice == "1")
@@ -35,7 +35,7 @@ namespace LemonadeStand
 				iceOnHand += 750;
 				iceUnitPrice -= 2.75M;
 				}
-			Console.WriteLine("You now have this many ice units : " + (iceOnHand)+"\n" +(iceUnitPrice) + "will be deducted from your balance");
+			Console.WriteLine("\nYou now have this many ice units : " + (iceOnHand)+"\n" +(iceUnitPrice) + "will be deducted from your balance");
 			}
 		}
 	}

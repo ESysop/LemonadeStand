@@ -47,8 +47,9 @@
     <Compile Include="Day.cs" />
     <Compile Include="Factors.cs" />
     <Compile Include="Game.cs" />
-    <Compile Include="Inventory.cs" />
-    <Compile Include="Mood.cs" />
+    <Compile Include="Ice.cs" />
+    <Compile Include="Lemons.cs" />
+    <Compile Include="PaperCups.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -58,8 +59,10 @@
     <Compile Include="Sold.cs" />
     <Compile Include="SplashScreen.cs" />
     <Compile Include="Store.cs" />
+    <Compile Include="Sugar.cs" />
     <Compile Include="Temperature.cs" />
     <Compile Include="UserInterface.cs" />
+    <Compile Include="Water.cs" />
     <Compile Include="Weather.cs" />
   </ItemGroup>
   <ItemGroup>
