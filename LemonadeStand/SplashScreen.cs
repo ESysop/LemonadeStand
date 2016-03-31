@@ -13,6 +13,8 @@ namespace LemonadeStand
 			{
 			menu = Menu;
 			}
+	
+
 		public void printSplashScreen ()
 			{
 			Weather getWeatherReport = new Weather();
@@ -44,7 +46,23 @@ namespace LemonadeStand
 					Console.WriteLine("Todays price is ( $ "+ (newPriceForToday) + " )");
 					menu.sellSetPrice = newPriceForToday;	
 					}
+				else
+					{
+					Console.WriteLine("Lets Play.");
+					}
+
 				}
+			}
+		public void dayPlay (Store PlayaDay)
+			{
+			Weather getWeatherReport = new Weather();
+			RandomGenerator t100 = new RandomGenerator();
+			t100.TempGen100();
+			RandomGenerator r4 = new RandomGenerator();
+			r4.RandGen4();
+			Console.WriteLine("Todays actual weather is -- " + (getWeatherReport.weatherConditionsList[r4.R4]) + " With a high Temperature of " + (t100.T100) + "°");
+			Console.WriteLine("\n\n Here come the customers!!\n\n");
+
 			}
 		}
 	}

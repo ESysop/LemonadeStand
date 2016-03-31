@@ -27,12 +27,12 @@ namespace LemonadeStand
 
 				splashscreen.printSplashScreen();
 				menu.inventoryDisplay();
-				splashscreen.restockOption();
-				menu.inventoryDisplay();
-				splashscreen.restockOption();
-			splashscreen.restockOption();
-			splashscreen.restockOption();
-			menu.inventoryDisplay();
+			//	splashscreen.restockOption();
+			//	menu.inventoryDisplay();
+			//	splashscreen.restockOption();
+			//splashscreen.restockOption();
+			//splashscreen.restockOption();
+			//menu.inventoryDisplay();
 
 		
 

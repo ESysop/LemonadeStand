@@ -8,10 +8,12 @@ namespace LemonadeStand
 	{
 	public class Customer
 		{
+		
 		public Customer()
 			{ }
 		RandomGenerator mood = new RandomGenerator();
 		public List<int> customerMoodList = new List<int>();
+
 		public void makeCustomers ()
 			{
 				

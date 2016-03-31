@@ -13,6 +13,8 @@ namespace LemonadeStand
 		public Sugar goToBuyMoreSugarMenu;
 		public PaperCups goToBuyCupsMenu;
 		public Purse purse;
+		public SplashScreen goToSplashScreen;
+
 		public decimal sellSetPrice = 0.00M;
 
 
@@ -22,6 +24,7 @@ namespace LemonadeStand
 			goToBuyCupsMenu = new PaperCups();
 			goToBuyMoreSugarMenu = new Sugar();
 			goToBuyMoreLemonsMenu = new Lemons();
+			
 			purse = new Purse();
 
 			}
@@ -51,7 +54,9 @@ namespace LemonadeStand
 			}
 		public void inventoryDisplay ()
 			{
-			Console.WriteLine("\nYour Current Inventory levels are as follows:\n\nCups\t" + (goToBuyCupsMenu.cupsOnHand) + "\nIce\t" + (goToBuyIceMenu.iceOnHand) + "\nSugar\t" + (goToBuyMoreSugarMenu.sugarOnHand) + "\nLemons\t" + (goToBuyMoreLemonsMenu.lemonsOnHand)  );//waterOnHand
+			Console.WriteLine("\n\nYour Cashbox has $" + (purse.purseBalance));
+			Console.WriteLine("\n\nYour Current Inventory levels are as follows:\n\nCups\t" + (goToBuyCupsMenu.cupsOnHand) + "\nIce\t" + (goToBuyIceMenu.iceOnHand) + "\nSugar\t" + (goToBuyMoreSugarMenu.sugarOnHand) + "\nLemons\t" + (goToBuyMoreLemonsMenu.lemonsOnHand)  );//waterOnHand
+			
 			}
 		}
 	}
