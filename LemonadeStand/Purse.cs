@@ -8,9 +8,7 @@ namespace LemonadeStand
 	{
 	public class Purse
 		{
-
 		public decimal purseBalance = 20.00M;
-
 		public Purse ()
 			{ }
 			public void buySupplies ()

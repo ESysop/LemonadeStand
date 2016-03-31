@@ -19,7 +19,7 @@ namespace LemonadeStand
 	
 		public void buyMoreCups (Purse purse)
 			{
-			Console.WriteLine("You have " + (purse.purseBalance) + "in your cashbox./n/n");
+			Console.WriteLine("You have $" + (purse.purseBalance) + " in your cashbox.\n\n");
 			Console.WriteLine("Select a quantity for your order.\n\n[1]\t100 Cups\n[2]\t300 Cups\n[3]\t750 Cups");
 			string usersChoice = Console.ReadLine();
 			
@@ -39,7 +39,7 @@ namespace LemonadeStand
 				cupsOnHand += 750;
 				purse.purseBalance -= paperCupUnitPrice3;
 				}
-			Console.WriteLine("\nYou now have this many Paper Cup units : " + (cupsOnHand) + "\nThis is your new balance" + (purse.purseBalance));
+			Console.WriteLine("\nYou now have this many Paper Cup units : " + (cupsOnHand) + "\nThis is your new balance " + (purse.purseBalance));
 			}
 		}
 	}

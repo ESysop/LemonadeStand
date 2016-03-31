@@ -39,7 +39,7 @@ namespace LemonadeStand
 				iceOnHand += 750;
 				purse.purseBalance -= iceUnitPrice3;
 				}
-			Console.WriteLine("\nYou now have this many ice units : " + (iceOnHand) + "\nThis is your new balance" + (purse.purseBalance));
+			Console.WriteLine("\nYou now have this many ice units : " + (iceOnHand) + "\nThis is your new balance " + (purse.purseBalance));
 			}
 		}
 	}

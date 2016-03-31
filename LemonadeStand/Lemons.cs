@@ -40,7 +40,7 @@ namespace LemonadeStand
 
 				
 				}
-			Console.WriteLine("\nYou now have this many Lemon units : " + (lemonsOnHand) + "\nThis is your new balance" + (purse.purseBalance));
+			Console.WriteLine("\nYou now have this many Lemon units : " + (lemonsOnHand) + "\n\nThis is your new balance $ " + (purse.purseBalance));
 			}
 		}
 	}

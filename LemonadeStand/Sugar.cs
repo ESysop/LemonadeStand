@@ -20,7 +20,7 @@ namespace LemonadeStand
 
 		public void buyMoreSugar (Purse purse)
 			{
-			Console.WriteLine("Select a quantity for your order.\n\n[1]\t10 Cups\n[2]\t30 Cups\n[3]\t75 Cups");
+			Console.WriteLine("Select a quantity for your order.\n\n[1]\t10 Cups\t + (\n[2]\t30 Cups\n[3]\t75 Cups");
 			string usersChoice = Console.ReadLine();
 			
 			if (usersChoice == "1")
@@ -38,7 +38,7 @@ namespace LemonadeStand
 				sugarOnHand += 75;
 				purse.purseBalance -= sugarUnitPrice3;
 				}
-			Console.WriteLine("\nYou now have this many Sugar units : " + (sugarOnHand) + "\nThis is your new balance" + (purse.purseBalance));
+			Console.WriteLine("\nYou now have this many Sugar units : " + (sugarOnHand) + "\nThis is your new balance " + (purse.purseBalance));
 			}
 
 		}

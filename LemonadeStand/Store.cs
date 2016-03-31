@@ -13,7 +13,9 @@ namespace LemonadeStand
 		public Sugar goToBuyMoreSugarMenu;
 		public PaperCups goToBuyCupsMenu;
 		public Purse purse;
-		
+		public decimal sellSetPrice = 0.00M;
+
+
 		public Store ()//instantiate 1 time in the constructor
 			{
 			goToBuyIceMenu = new Ice();
@@ -26,7 +28,7 @@ namespace LemonadeStand
 
 		public void getStoreMenu ()
 			{
-			Console.WriteLine("Thank you for shopping at Buyin Large, What would you like to purchase today?\n\n[1] Paper Cups\n[2] Lemons\n[3] Sugar\n[4] Ice");
+			Console.WriteLine("\nThank you for shopping at Buyin Large, What would you like to purchase today?\n\n[1] Paper Cups\n[2] Lemons\n[3] Sugar\n[4] Ice");
 
 			string storeChoice = Console.ReadLine();
 			if (storeChoice == "1")

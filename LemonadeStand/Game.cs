@@ -13,7 +13,7 @@ namespace LemonadeStand
 			Customer makeCustomerList = new Customer();
 
 			public Game ()
-			// in the constructor we passed in 'menu' which is a new instantiation of 'store'
+			// in the constructor below we passed in 'menu' which is a new instantiation of 'store'
 			{
 			splashscreen = new SplashScreen(menu);
 			}
@@ -23,7 +23,6 @@ namespace LemonadeStand
 			
 			
 			{
-
 				makeCustomerList.makeCustomers();
 
 				splashscreen.printSplashScreen();
@@ -35,12 +34,7 @@ namespace LemonadeStand
 			splashscreen.restockOption();
 			menu.inventoryDisplay();
 
-			splashscreen.restockOption();
-				menu.inventoryDisplay();
-			splashscreen.restockOption();
-				menu.inventoryDisplay();
-			splashscreen.restockOption();
-			menu.inventoryDisplay();
+		
 
 
 			}
