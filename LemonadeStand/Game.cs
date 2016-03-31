@@ -10,8 +10,6 @@ namespace LemonadeStand
 		{
 			Store menu = new Store();
 			SplashScreen splashscreen;
-			//Weather getWeatherCondition = new Weather();
-			//Temperature getTemperatureCondition = new Temperature();
 			Customer makeCustomerList = new Customer();
 
 			public Game ()

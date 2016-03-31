@@ -13,10 +13,7 @@ namespace LemonadeStand
 		public Sugar goToBuyMoreSugarMenu;
 		public PaperCups goToBuyCupsMenu;
 		public Purse purse;
-		public int paperCupOnHand;
-		public int units;
-		public double unitPrice;
-
+		
 		public Store ()//instantiate 1 time in the constructor
 			{
 			goToBuyIceMenu = new Ice();
@@ -34,7 +31,7 @@ namespace LemonadeStand
 			string storeChoice = Console.ReadLine();
 			if (storeChoice == "1")
 				{
-				goToBuyCupsMenu.buyMoreCups();
+				goToBuyCupsMenu.buyMoreCups(purse);
 				}
 			else if (storeChoice == "2")
 				{
@@ -42,11 +39,11 @@ namespace LemonadeStand
 				}
 			else if (storeChoice == "3")
 				{
-				goToBuyMoreSugarMenu.buyMoreSugar();
+				goToBuyMoreSugarMenu.buyMoreSugar(purse);
 				}
 			else if (storeChoice == "4")
 				{
-				goToBuyIceMenu.buyMoreIce();
+				goToBuyIceMenu.buyMoreIce(purse);
 				}
 
 			}
