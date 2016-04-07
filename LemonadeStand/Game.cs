@@ -8,30 +8,32 @@ namespace LemonadeStand
 	{
 	public class Game
 		{
-			Store store ;
-			Player player;
-			SplashScreen splashscreen;
-			
+		Day day;
+		Store store;
+		Player player;
+		SplashScreen splashscreen;
 
-			public Game ()
-			
+
+		public Game ()
+
 			{
+			this.day = new Day();
 			this.player = new Player();
 			this.store = new Store();
 			this.splashscreen = new SplashScreen(store);
-			
+
 			}
 
 
-			public void startGame ()
-			
-			
+		public void startGame ()
+
+
 			{
 
-				splashscreen.printSplashScreen();
-				store.showStoreMenu(this.player);
-			
-			
+			splashscreen.printSplashScreen();
+			store.showStoreMenu(this.player);
+
+
 
 			}
 
@@ -39,4 +41,4 @@ namespace LemonadeStand
 
 		}
 	}
-	
+
