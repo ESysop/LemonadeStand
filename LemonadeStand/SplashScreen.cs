@@ -33,7 +33,7 @@ namespace LemonadeStand
 			string stockUp = Console.ReadLine();
 			if (stockUp.ToUpper() == "Y")
 				{
-				menu.getStoreMenu();
+				menu.showStoreMenu();
 				}
 			else
 				{

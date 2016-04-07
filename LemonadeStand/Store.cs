@@ -8,54 +8,157 @@ namespace LemonadeStand
 	{
 	public class Store
 		{// Member variables declared here so they can be accessed throu store
-		public Ice goToBuyIceMenu;
-		public Lemons goToBuyMoreLemonsMenu;
-		public Sugar goToBuyMoreSugarMenu;
-		public PaperCups goToBuyCupsMenu;
+		public Lemons lemons;
+		public Sugar sugar;
+		public PaperCups paperCups;
 		public Purse purse;
-		public SplashScreen goToSplashScreen;
+		
 
 		public decimal sellSetPrice = 0.00M;
-
-
+		public decimal ice100Unit = .75M;
+		public decimal ice300Unit = 1.75M;
+		public decimal ice750Unit = 2.75M;
+		public decimal lemons10Units = .75M;
+		public decimal lemons25Units = 1.75M;
+		public decimal lemons75Unit = 2.75M;
+		public decimal cups100Unit = .75M;
+		public decimal cups300Unit = 1.75M;
+		public decimal cups750Unit = 3.50M;
+		public decimal sugar10Unit = .75M;
+		public decimal sugar30Unit = 2.00M;
+		public decimal sugar75Unit = 6.50M;
 		public Store ()//instantiate 1 time in the constructor
 			{
-			goToBuyIceMenu = new Ice();
-			goToBuyCupsMenu = new PaperCups();
-			goToBuyMoreSugarMenu = new Sugar();
-			goToBuyMoreLemonsMenu = new Lemons();
-			
-			purse = new Purse();
+
 
 			}
+		public void buyMoreSugar (Purse purse)
+			{
+			Console.WriteLine("Select a quantity for your order.\n\n[1]\t10 Cups\t + (\n[2]\t30 Cups\n[3]\t75 Cups");
+			string usersChoice = Console.ReadLine();
 
-		public void getStoreMenu ()
+			if (usersChoice == "1")
+				{
+				sugarOnHand += 10;
+				purse.purseBalance -= sugarUnitPrice1;
+				}
+			else if (usersChoice == "2")
+				{
+				sugarOnHand += 30;
+				purse.purseBalance -= sugarUnitPrice2;
+				}
+			else if (usersChoice == "3")
+				{
+				sugarOnHand += 75;
+				purse.purseBalance -= sugarUnitPrice3;
+				}
+			Console.WriteLine("\nYou now have this many Sugar units : " + (sugarOnHand) + "\nThis is your new balance " + (purse.purseBalance));
+			}
+		public void buyMoreCups (Purse purse)
+			{
+			Console.WriteLine("You have $" + (purse.purseBalance) + " in your cashbox.\n\n");
+			Console.WriteLine("Select a quantity for your order.\n\n[1]\t100 Cups\n[2]\t300 Cups\n[3]\t750 Cups");
+			string usersChoice = Console.ReadLine();
+
+
+			if (usersChoice == "1")
+				{
+				cupsOnHand += 100;
+				purse.purseBalance -= paperCupUnitPrice1;
+				}
+			else if (usersChoice == "2")
+				{
+				cupsOnHand += 300;
+				purse.purseBalance -= paperCupUnitPrice2;
+				}
+			else if (usersChoice == "3")
+				{
+				cupsOnHand += 750;
+				purse.purseBalance -= paperCupUnitPrice3;
+				}
+			Console.WriteLine("\nYou now have this many Paper Cup units : " + (cupsOnHand) + "\nThis is your new balance " + (purse.purseBalance));
+			}
+		public void buyMoreLemons (Purse purse)
+			{
+			Console.WriteLine("Select a quantity for your order.\n\n [1] \t  10 Lemons \n [2] \t 25 Lemons \n [3] \t  75 Lemons");
+			string usersChoice = Console.ReadLine();
+
+
+			if (usersChoice == "1")
+				{
+				lemonsOnHand += 10;
+				purse.purseBalance -= lemons10Units;
+
+				}
+			else if (usersChoice == "2")
+				{
+				lemonsOnHand += 25;
+				purse.purseBalance -= lemons25Units;
+				}
+			else if (usersChoice == "3")
+				{
+				lemonsOnHand += 75;
+				purse.purseBalance -= lemons75Unit;
+
+
+				}
+			Console.WriteLine("\nYou now have this many Lemon units : " + (lemonsOnHand) + "\n\nThis is your new balance $ " + (purse.purseBalance));
+			}
+
+		public void buyMoreIce (Purse purse)
+			{
+			Console.WriteLine("Select a quantity for your order.\n\n[1]\t100 Cube\n[2]\t300 Cubes\n[3]\t750 Cubes");
+			string usersChoice = Console.ReadLine();
+
+
+			if (usersChoice == "1")
+				{
+				iceOnHand += 100;
+				purse.purseBalance -= ice100Unit;
+				}
+			else if (usersChoice == "2")
+				{
+				iceOnHand += 300;
+				purse.purseBalance -= ice300Unit;
+				}
+			else if (usersChoice == "3")
+				{
+				iceOnHand += 750;
+				purse.purseBalance -= ice750Unit;
+				}
+			Console.WriteLine("\nYou now have this many ice units : " + (iceOnHand) + "\nThis is your new balance " + (purse.purseBalance));
+			}
+
+		public void showStoreMenu ()
 			{
 			Console.WriteLine("\nThank you for shopping at Buyin Large, What would you like to purchase today?\n\n[1] Paper Cups\n[2] Lemons\n[3] Sugar\n[4] Ice");
 
 			string storeChoice = Console.ReadLine();
 			if (storeChoice == "1")
 				{
-				goToBuyCupsMenu.buyMoreCups(purse);
+				paperCups.buyMoreCups(purse);
 				}
 			else if (storeChoice == "2")
 				{
-				goToBuyMoreLemonsMenu.buyMoreLemons (purse);	
+				lemons.buyMoreLemons (purse);	
 				}
 			else if (storeChoice == "3")
 				{
-				goToBuyMoreSugarMenu.buyMoreSugar(purse);
+				sugar.buyMoreSugar(purse);
 				}
 			else if (storeChoice == "4")
 				{
-				goToBuyIceMenu.buyMoreIce(purse);
+				buyMoreIce(purse);
+
+				}
+			else
+				{
+				Console.WriteLine("Please enter one of the store choices ");
+				showStoreMenu();
 				}
 
 			}
-		public void inventoryDisplay ()
-			{
-			Console.WriteLine("\n\nYour Cashbox has $" + (purse.purseBalance));
-			Console.WriteLine("\n\nYour Current Inventory levels are as follows:\n\nCups\t" + (goToBuyCupsMenu.cupsOnHand) + "\nIce\t" + (goToBuyIceMenu.iceOnHand) + "\nSugar\t" + (goToBuyMoreSugarMenu.sugarOnHand) + "\nLemons\t" + (goToBuyMoreLemonsMenu.lemonsOnHand)  );//waterOnHand
+		
 			
 			}
 		}
