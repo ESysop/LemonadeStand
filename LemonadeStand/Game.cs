@@ -17,9 +17,9 @@ namespace LemonadeStand
 			
 			{
 			this.player = new Player();
-			store = new Store();
+			this.store = new Store();
 			this.splashscreen = new SplashScreen(store);
-			makeCustomerList = new Customer();
+			
 			}
 
 
@@ -27,14 +27,11 @@ namespace LemonadeStand
 			
 			
 			{
-				makeCustomerList.makeCustomers();
 
 				splashscreen.printSplashScreen();
 				store.showStoreMenu(this.player);
 			
-
-		
-
+			
 
 			}
 

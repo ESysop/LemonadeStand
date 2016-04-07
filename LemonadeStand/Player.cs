@@ -8,7 +8,15 @@ namespace LemonadeStand
 	{
 	public class Player
 		{
-		Inventory inventory;
+		public Inventory inventory;
+		public Purse purse;
+
+		public Player ()
+			{
+			this.inventory = new Inventory();
+			this.purse = new Purse();
+			}
 		}
+	
 
 	}
