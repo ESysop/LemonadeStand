@@ -10,12 +10,9 @@ namespace LemonadeStand
 		{
 		static void Main (string[] args)
 			{
-
+			Console.Title = "Triple \"E\" Lemonade Stand";
 			Game Run = new Game();
 			Run.startGame();
 			}
-		
-		
 		}
-
 	}
