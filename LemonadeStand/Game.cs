@@ -11,8 +11,6 @@ namespace LemonadeStand
 		Day day;
 		Store store;
 		Player player;
-		SplashScreen splashscreen;
-
 
 		public Game ()
 
@@ -20,25 +18,29 @@ namespace LemonadeStand
 			this.day = new Day();
 			this.player = new Player();
 			this.store = new Store();
-			this.splashscreen = new SplashScreen(store);
-
 			}
-
 
 		public void startGame ()
-
-
 			{
-
-			splashscreen.printSplashScreen();
-			store.showStoreMenu(this.player);
-
-
-
+			Console.WriteLine("Welcome to the Lemonade Stand\n\n\tThe gold standard in Lemonade Stands\n\nSince you have no ingredients let's go buy some.\n\n");
+			player.inventory.inventoryReport();
+			Console.WriteLine("\nDad gave you $"+(player.purse.purseBalance)+" to get started");
+			restockOption(this.store);
+			day.dayPlay();
 			}
 
-
-
+		public void restockOption (Store store)
+			{
+			Console.Write("\n\nWould you like to go to the store to stock up on supplies?\n\n\t[Y] or [N]\n");
+			string stockUp = Console.ReadLine();
+			if (stockUp.ToUpper() == "Y")
+				{
+				store.showStoreMenu(this.player);
+				}
+			else
+				{
+				}
+			}
 		}
 	}
 

@@ -58,11 +58,9 @@
     <Compile Include="RandomGenerator.cs" />
     <Compile Include="Report.cs" />
     <Compile Include="Sold.cs" />
-    <Compile Include="SplashScreen.cs" />
     <Compile Include="Store.cs" />
     <Compile Include="Sugar.cs" />
     <Compile Include="Temperature.cs" />
-    <Compile Include="UserInterface.cs" />
     <Compile Include="Weather.cs" />
   </ItemGroup>
   <ItemGroup>

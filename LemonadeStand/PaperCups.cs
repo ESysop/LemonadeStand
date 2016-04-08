@@ -9,7 +9,7 @@ namespace LemonadeStand
 	public class PaperCups
 		{
 		public PaperCups ()
-			{ }
-	
+			{
+			}
 		}
 	}

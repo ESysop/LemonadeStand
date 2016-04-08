@@ -13,7 +13,10 @@ namespace LemonadeStand
 			{
 
 			}
-			
+			public void showPurseBalance ()
+			{
+			Console.WriteLine(purseBalance);
+			}
 
 			
 		}
