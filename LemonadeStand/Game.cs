@@ -8,6 +8,7 @@ namespace LemonadeStand
 	{
 	public class Game
 		{
+		int dayNumber = 1;
 		Day day;
 		Store store;
 		Player player;
@@ -35,6 +36,7 @@ namespace LemonadeStand
 			string stockUp = Console.ReadLine();
 			if (stockUp.ToUpper() == "Y")
 				{
+				Console.Clear();
 				store.showStoreMenu(this.player);
 				}
 			else

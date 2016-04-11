@@ -19,6 +19,8 @@ namespace LemonadeStand
 			}
 		public void showStoreMenu (Player player)
 			{
+			Console.Clear();
+
 			Console.WriteLine("\n\nThank you for shopping at...\n\n\t\tThe Grocery Glutten,\n\nWhat would you like to over purchase today?\n\n[1] Paper Cups\n[2] Lemons\n[3] Sugar\n[4] Ice\n\n");
 			Console.Write("Please enter one of the store choices or ANY other Key when your done making purchases");
 			string storeChoice = Console.ReadLine();
@@ -39,9 +41,10 @@ namespace LemonadeStand
 						buyMoreIce(player);
 						}
 			}
-
 		public void buyMoreCups (Player player)
 			{
+			Console.Clear();
+
 			Console.WriteLine("You have $" + (player.purse.purseBalance) + " in your cashbox.\n\n");
 			Console.WriteLine("Select a quantity for your order.\n\n[1]\t100 Cups\n[2]\t300 Cups\n[3]\t750 Cups\n\n");
 			Console.Write("Your choice ");
@@ -75,13 +78,13 @@ namespace LemonadeStand
 			Console.WriteLine("\nThis is your new cashbox balance " + (player.purse.purseBalance));
 			showStoreMenu(player);
 			}
-
-		public void buyMoreLemons (Player player)
+	public void buyMoreLemons (Player player)
 			{
+			Console.Clear();
+
 			Console.WriteLine("\nSelect a quantity for your order.\n\n [1] \t10 Lemons \n [2] \t25 Lemons \n [3] \t75 Lemons\n");
 			Console.Write("Your choice ");
-			string usersChoice = Console.ReadLine();
-
+				string usersChoice = Console.ReadLine();
 			if (usersChoice == "1")
 				{
 				for (int lemons = 0; lemons < 10; lemons++)
@@ -106,18 +109,16 @@ namespace LemonadeStand
 					}
 				player.purse.purseBalance -= lemons75Units;
 				}
-			Console.Clear();
 			Console.WriteLine("\n\nThis is your new cashbox balance $ " + (player.purse.purseBalance));
 			showStoreMenu(player);
 			}
-
-
-		public void buyMoreSugar (Player player)
+	public void buyMoreSugar (Player player)
 			{
-			Console.WriteLine("\nSelect a quantity for your order.\n\n[1]\t10 Cups\n[2]\t30 Cups\n[3]\t75 Cups");
-			string usersChoice = Console.ReadLine();
-			Console.Write("Your choice ");
+			Console.Clear();
 
+			Console.WriteLine("\nSelect a quantity for your order.\n\n[1]\t10 Cups\n[2]\t30 Cups\n[3]\t75 Cups");
+				string usersChoice = Console.ReadLine();
+			Console.Write("Your choice ");
 			if (usersChoice == "1")
 				{
 				for (int i = 0; i < 100; i++)
@@ -143,15 +144,15 @@ namespace LemonadeStand
 				player.purse.purseBalance -= ice750Unit;
 				}
 			Console.WriteLine("\n\nThis is your new balance " + (player.purse.purseBalance));
-			showStoreMenu(player);
-			}
-
-		public void buyMoreIce (Player player)
+				showStoreMenu(player);
+				}
+	public void buyMoreIce (Player player)
 			{
+			Console.Clear();
+
 			Console.WriteLine("\nSelect a quantity for your order.\n\n[1]\t100 Cube\n[2]\t300 Cubes\n[3]\t750 Cubes");
 			Console.Write("Your choice ");
-			string usersChoice = Console.ReadLine();
-
+				string usersChoice = Console.ReadLine();
 			if (usersChoice == "1")
 				{
 				for (int i = 0; i < 100; i++)
@@ -159,7 +160,6 @@ namespace LemonadeStand
 					player.inventory.iceList.Add(new Ice());
 					player.purse.purseBalance -= singleIceCube;
 					}
-
 				}
 			else if (usersChoice == "2")
 				{
@@ -179,13 +179,8 @@ namespace LemonadeStand
 				}
 			Console.WriteLine("\n\nYou now have this many ice units : " + (player.inventory.iceList.Count) + "\n\nThis is your new balance " + (player.purse.purseBalance));
 			showStoreMenu(player);
-
 			}
-
 		}
-
-
-
 	}
 
 

@@ -17,8 +17,6 @@ namespace LemonadeStand
 			{
 			Console.WriteLine(purseBalance);
 			}
-
-			
 		}
 	}
 

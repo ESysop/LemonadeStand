@@ -8,20 +8,20 @@ namespace LemonadeStand
 	{
 	public class Customer
 		{
+		Random mood;
 		
 		public Customer()
-			{ }
-		RandomGenerator mood = new RandomGenerator();
+			{
+			mood = new Random();
+			}
 		public List<int> customerList = new List<int>();
 
-		public void makeCustomers ()
+		public void makeCustomer ()
 			{
-			for (int i = 0; i < 100; i++)
+			for (int marks = 0; marks < 100; marks++)
 				{
-				mood.RandGen4();
-				int moodFactor = mood.R4;
+				int moodFactor = mood.Next(0,4);
 				customerList.Add(moodFactor);
-
 				}
 			}
 		}

@@ -18,36 +18,32 @@ namespace LemonadeStand
 			{
 			}
 		
-	
-	public void temperatureCurrent ()
+	public void temperatureForcast ()
 			{
 			Random rnd = new Random();
 			T100 = rnd.Next(15, 116);
 			todaysTemperature = T100;
+			
 			}
-
-
-	public void temperatureForcast ()
+		public void temperatureCurrent ()
 			{
 			Random rand = new Random();
 			int weatherShift = rand.Next(-10, 11);
 			forcastedTemperature = todaysTemperature += weatherShift;
+			
 			}
-
-
-	public void weatherCurrent ()
-			{
-			Random rando = new Random();
-			int conditionShift = rando.Next(-1, 2);
-			todaysWeatherCondition = forcastedWeatherCondition += conditionShift;
-			}
-
 
 		public void weatherForcast ()
 			{
 			Random rnd = new Random();
 			R4 = rnd.Next(0, 4);
 			forcastedWeatherCondition=weatherConditionsList[R4];
+			}
+		public void weatherCurrent ()
+			{
+			Random rando = new Random();
+			int conditionShift = rando.Next(-1, 2);
+			todaysWeatherCondition = forcastedWeatherCondition += conditionShift;
 			}
 		}
 }

@@ -19,31 +19,31 @@ namespace LemonadeStand
 		public Day ()
 			{
 			customer = new List<Customer>();
-			dayNumber = 1;
-			getWeatherReport = new Weather();
+			weather = new Weather();
 			}
 		public void dayPlay ()
 			{
-			//customer.makeCustomers();
-			t100.TempGen100();
-			r4.RandGen4();
-			Console.WriteLine("The Forecast for today is \n\n" + (weather.weatherConditionsList[r4.R4]) + " With a high Temperature of " + (weather.todaysTemperature) + "°");
-			t100.TempGen100();
-			r4.RandGen4();
-			Console.WriteLine("Todays actual weather is -- " + (weather.weatherConditionsList[r4.R4]) + " With a high Temperature of " + (t100.T100) + "°");
+			Console.Clear();
+			weather.temperatureForcast();
+			weather.temperatureCurrent();
+			weather.weatherForcast();
+			weather.weatherCurrent();
+			Console.WriteLine("The Forecast for today is \n\n" + (weather.forcastedWeatherCondition) + " With a high Temperature of " + (weather.forcastedTemperature) + "°");
+			Console.WriteLine("Todays actual weather is -- " + (weather.todaysWeatherCondition ) + " With a high Temperature of " + (weather.todaysTemperature) + "°");
 			Console.WriteLine("\n\n Here come the customers!!\n\n");
 			Console.Read();
 			}
-		public void setSellingPriceForDay () { 
-			
-				Console.WriteLine("Your selling price per cup is set to $ " + (sellSetPrice) + "\nWould you like to change this?\n\n[Y] or [N]");
-				string priceChange = Console.ReadLine();
+		public void setSellingPriceForDay ()
+			{
+			Console.Clear();
+			Console.WriteLine("Your selling price per cup is set to $ " + (sellSetPrice) + "\nWould you like to change this?\n\n[Y] or [N]");
+					string priceChange = Console.ReadLine();
 				if (priceChange.ToUpper() == "Y")
 					{
 					Console.Write("\nEnter the price you want to charge per cup for today.\n");
-					decimal newPriceForToday = Convert.ToDecimal(Console.ReadLine());
+						decimal newPriceForToday = Convert.ToDecimal(Console.ReadLine());
 					Console.WriteLine("\nTodays price is ( $ " + (newPriceForToday) + " )");
-					sellSetPrice = newPriceForToday;
+						sellSetPrice = newPriceForToday;
 					}
 				else
 					{
