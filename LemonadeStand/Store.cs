@@ -8,7 +8,6 @@ namespace LemonadeStand
 	{
 	public class Store
 		{
-		
 		public decimal singleIceCube = .0075M, singleLemon = .075M, singleCupOfSugar = .075M, singlePaperCup = .0075M;
 		public decimal ice100Unit = .75M, ice300Unit = 1.75M, ice750Unit = 2.75M;
 		public decimal lemons10Units = .75M, lemons25Units = 1.75M, lemons75Units = 2.75M;
@@ -22,7 +21,6 @@ namespace LemonadeStand
 			{
 			Console.WriteLine("\n\nThank you for shopping at...\n\n\t\tThe Grocery Glutten,\n\nWhat would you like to over purchase today?\n\n[1] Paper Cups\n[2] Lemons\n[3] Sugar\n[4] Ice\n\n");
 			Console.Write("Please enter one of the store choices or ANY other Key when your done making purchases");
-
 			string storeChoice = Console.ReadLine();
 					if (storeChoice == "1")
 						{
@@ -39,10 +37,6 @@ namespace LemonadeStand
 					else if (storeChoice == "4")
 						{
 						buyMoreIce(player);
-						}
-					else
-						{
-				//day.dayPlay();
 						}
 			}
 
@@ -82,11 +76,9 @@ namespace LemonadeStand
 			showStoreMenu(player);
 			}
 
-
-
 		public void buyMoreLemons (Player player)
 			{
-			Console.WriteLine("\nSelect a quantity for your order.\n\n [1] \t  10 Lemons \n [2] \t 25 Lemons \n [3] \t  75 Lemons\n");
+			Console.WriteLine("\nSelect a quantity for your order.\n\n [1] \t10 Lemons \n [2] \t25 Lemons \n [3] \t75 Lemons\n");
 			Console.Write("Your choice ");
 			string usersChoice = Console.ReadLine();
 
@@ -114,10 +106,10 @@ namespace LemonadeStand
 					}
 				player.purse.purseBalance -= lemons75Units;
 				}
+			Console.Clear();
 			Console.WriteLine("\n\nThis is your new cashbox balance $ " + (player.purse.purseBalance));
 			showStoreMenu(player);
 			}
-
 
 
 		public void buyMoreSugar (Player player)
@@ -150,7 +142,7 @@ namespace LemonadeStand
 					}
 				player.purse.purseBalance -= ice750Unit;
 				}
-			Console.WriteLine("\n\nYou now have this many Sugar units : " + (player.inventory.sugarList.Count) + "\n\nThis is your new balance " + (player.purse.purseBalance));
+			Console.WriteLine("\n\nThis is your new balance " + (player.purse.purseBalance));
 			showStoreMenu(player);
 			}
 

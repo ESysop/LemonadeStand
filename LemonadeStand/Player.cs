@@ -10,13 +10,20 @@ namespace LemonadeStand
 		{
 		public Inventory inventory;
 		public Purse purse;
+		public Recipe recipe;
 
 		public Player ()
 			{
 			this.inventory = new Inventory();
 			this.purse = new Purse();
+			this.recipe = new Recipe();
+			}
+		public void secretRecipe ()
+			{
+
 			}
 		}
-	
+	//recipe
+	//set sale price here
 
 	}

@@ -6,14 +6,16 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 	{
-	class Factors
+	public class Recipe
 		{
-		
-
-		public Factors ()
+		public double lemon, sugar, ice, cup;
+		public Recipe ()
 			{
-
+			lemon = .2;
+			sugar = .3;
+			ice = 6;
+			cup = 1;
 			}
-		
 		}
-	}	
+
+	}

@@ -39,6 +39,7 @@ namespace LemonadeStand
 				}
 			else
 				{
+				day.setSellingPriceForDay ();
 				}
 			}
 		}
