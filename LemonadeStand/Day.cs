@@ -28,15 +28,15 @@ namespace LemonadeStand
 			weather.temperatureCurrent();
 			weather.weatherForcast();
 			weather.weatherCurrent();
-			Console.WriteLine("The Forecast for today is \n\n" + (weather.forcastedWeatherCondition) + " With a high Temperature of " + (weather.forcastedTemperature) + "°");
-			Console.WriteLine("Todays actual weather is -- " + (weather.todaysWeatherCondition ) + " With a high Temperature of " + (weather.todaysTemperature) + "°");
+			Console.WriteLine("\nThe Forecast for today is \n\n" + (weather.forcastedWeatherCondition) + " With a high Temperature of " + (weather.forcastedTemperature) + "°");
+			Console.WriteLine("\nTodays actual weather is -- " + (weather.todaysWeatherCondition ) + " With a high Temperature of " + (weather.todaysTemperature) + "°");
 			Console.WriteLine("\n\n Here come the customers!!\n\n");
 			Console.Read();
 			}
 		public void setSellingPriceForDay ()
 			{
 			Console.Clear();
-			Console.WriteLine("Your selling price per cup is set to $ " + (sellSetPrice) + "\nWould you like to change this?\n\n[Y] or [N]");
+			Console.WriteLine("\nYour selling price per cup is set to $ " + (sellSetPrice) + "\nWould you like to change this?\n\n[Y] or [N]");
 					string priceChange = Console.ReadLine();
 				if (priceChange.ToUpper() == "Y")
 					{
@@ -85,11 +85,11 @@ namespace LemonadeStand
 			}
 	public void saleEvent ()
 			{
-			if (weatherFactor + moodFactor + tempFactor + (priceFactor) >= 8) purchaseMade = true;
+			tempFactor = weather.todaysTemperature;
+			if (weather.R4 + moodFactor + tempFactor + (priceFactor) >= 8) purchaseMade = true;
 			}
+		}
 	}
-
-			}
 	
 
 		
