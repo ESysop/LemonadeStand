@@ -23,14 +23,12 @@ namespace LemonadeStand
 			Random rnd = new Random();
 			T100 = rnd.Next(15, 116);
 			todaysTemperature = T100;
-			
 			}
 		public void temperatureCurrent ()
 			{
 			Random rand = new Random();
 			int weatherShift = rand.Next(-10, 11);
 			forcastedTemperature = todaysTemperature += weatherShift;
-			
 			}
 
 		public void weatherForcast ()
@@ -43,7 +41,16 @@ namespace LemonadeStand
 			{
 			Random rando = new Random();
 			int conditionShift = rando.Next(-1, 2);
-			todaysWeatherCondition = forcastedWeatherCondition += conditionShift;
+			//int rangeCheck;
+			if ((R4 += conditionShift) <= 0)
+				{
+				R4 = 0;
+				}
+			else if ((R4 += conditionShift) >= 3)
+				{
+				R4  =3;
+				}
+			todaysWeatherCondition = weatherConditionsList[R4];
 			}
 		}
 }
